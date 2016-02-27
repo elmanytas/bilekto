@@ -1,0 +1,63 @@
+; Title of your image gallery
+gallery_name = "Bilekto Image Gallery"
+
+; Path where images are located
+gallery_path = "./images"
+
+
+; How URLs should be composed:
+; - "query_string": Basic handling using query strings, no special server configuration required
+;                   e.g: http://my.gallery/?q=view/myAlbum/
+; - "path_info": Use the cgi PATH_INFO variable to obtain the full request path
+;                e.g: http://my.gallery/index.php/view/myAlbum/
+; - "rewrite": Use URL rewrite support from the HTTP server (see provided .htaccess for Apache)
+;              e.g: http://my.gallery/view/myAlbum/
+url_mode = "query_string"
+
+
+; Allow to download albums as ZIP archives
+allow_downloads = true
+
+; Show the estimated size of the archive when downloads are enabled
+; Note: Estimating the size can take some time if there are many files and subdirectories,
+; so you might need to disable this config option in some cases (download link will still
+; be shown if "allow_downloads" is set to true, but without a size estimation)
+estimate_archive_size = true
+
+
+; Don't include videos in the gallery, show only images
+ignore_videos = "false"
+
+
+; Thumb caching:
+; - "disabled": no caching, thumbs are always generated on the fly
+; - "ro": use cached thumbs if available, but don't write them when generated on the fly (this
+;         is normally used in combination with the pregenerate-cache.php script)
+; - "rw": use cached thumbs and also write them to disk when generated on the fly (the user
+;         running the web server will need write permissions for this)
+caching = "ro"
+
+; Use EXIF thumbs to generate thumbnails when they are available and have enough resolution
+; Note: Most cameras generate EXIF thumbs at 160x120, so most probably you won't take any
+; advantage of this unless you have regenerated EXIF thumbs with a higher resolution
+exif_thumbnails = "false"
+
+
+; Thumbnail JPEG quality
+thumb_quality = 80
+
+; Thumbnail format:
+; - "croptofit": Crop the image as needed so the thumbnail fits completely the desired resolution
+; - "letterbox": Keep the original image proportion, adding white borders when it doesn't match the desired resolution
+thumb_format = "croptofit"
+
+; Thumbnail allowed resolutions
+thumb_resolutions[] = "120x120"
+thumb_resolutions[] = "360x360"
+
+
+; Slideshow JPEG quality
+slideshow_quality = 80
+
+; Slideshow resolution (set it as "original" for the original image resolution without resizing)
+slideshow_resolution = "1920x1920"

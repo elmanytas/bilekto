@@ -1,0 +1,46 @@
+body {
+	margin: 10px 0px;
+	overflow-y: scroll;
+}
+a {
+    text-decoration: none;
+    color: #49c;
+}
+.header {
+    font-family: Verdana, sans-serif;
+    font-size: 0.9em;
+    color: #444;
+	margin-left: 3%;
+	margin-right: 3%;
+	text-align: center;
+}
+.navigation {
+	display: inline-block;
+    margin-bottom: 1em;
+}
+.navigation img {
+	vertical-align: -0.5em;
+}
+.subfolders {
+	display: inline-block;
+	text-align: left;
+    margin-bottom: 1em;
+}
+.texticon {
+    font-family: Monospace;
+}
+.folder {
+    margin: 0px;
+    padding: 0px;
+}
+.gallery {
+    text-align: center;
+}
+.thumb {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+}
+.thumb a {
+    display: inline-block;
+}
