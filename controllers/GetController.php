@@ -16,6 +16,8 @@ class GetController extends BaseController {
 		header('Content-type: ' . $contentType);
 		$contentLength = filesize($filePath);
 		header('Content-length: ' . $contentLength);
+		$downloadName = basename($media->getFilename());
+		header("Content-Disposition: inline; filename=\"$downloadName\"");
 
 		// Cleanup the output buffer so that readfile doesn't fail by OOM
 		while (ob_get_level()) {
