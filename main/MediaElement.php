@@ -37,7 +37,7 @@ abstract class MediaElement {
 
 	public static function getExtension($file) {
 		$offset = strrpos($file, '.');
-		return ($offset === False) ? '' : substr($file, $offset + 1);
+		return ($offset === False) ? '' : strtolower(substr($file, $offset + 1));
 	}
 
 	abstract public function getDimensions();
