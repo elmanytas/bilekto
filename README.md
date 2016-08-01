@@ -24,12 +24,12 @@ Basic principles:
 
 Bilekto is designed to be very easy and quick to install. You only need these steps:
 
-- Copy config.php.dist to config.php
+- Copy config.ini.dist to config.ini
 - Adjust the basic settings (`gallery_name` and `gallery_path`)
 
 And you are done!
 
-For more detail on the configuration parameters, see the description in the next subsections and in the config.php.dist itself
+For more detail on the configuration parameters, see the description in the next subsections and in the config.ini.dist itself
 
 ### Thumbnail caching
 
