@@ -10,7 +10,7 @@ RUN sed -i "s/80/8080/g" /etc/apache2/sites-available/000-default.conf
 RUN sed -i "s|^.*ErrorLog.*$|        ErrorLog /dev/stderr|g" /etc/apache2/sites-available/000-default.conf
 RUN sed -i "s|^.*CustomLog.*$|        CustomLog /dev/stdout combined|g" /etc/apache2/sites-available/000-default.conf
 
-RUN rm -rf /var/www/html/*;git clone https://github.com/elmanytas/bilekto /var/www/html/
+RUN rm -rf /var/www/html/*;git clone https://github.com/netsuso/bilekto /var/www/html/
 
 VOLUME ["/var/www/html/images"]
 
